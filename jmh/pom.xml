@@ -3,9 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.hays.scratch</groupId>
+    <parent>
+        <groupId>io.github.rkraneis.benchmarks</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <artifactId>jmh</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Actual Benchmarks</name>
@@ -41,6 +44,11 @@
             <groupId>com.aol.cyclops</groupId>
             <artifactId>cyclops-trampoline</artifactId>
             <version>7.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>targets</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
